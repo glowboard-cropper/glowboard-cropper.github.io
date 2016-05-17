@@ -100,7 +100,7 @@ $(function () {
             var str =
                 "wget -O /tmp/out.png "+url+"; ";
             //str += "convert - -resize 144x120 -gravity center -background black -extent 144x120 -monochrome /tmp/out.png && ";
-            str += "curl -X POST -d @/tmp/out.png http://192.168.21.124:9027";
+            str += "curl -F file=@/tmp/out.png http://192.168.21.124:9027";
             //str += "dd if=/tmp/out.bin skip=0 bs=720 count=1 2>/dev/null | nc -u -w 1 -6 2001:67c:20a1:1095:ba27:ebff:feb9:db12 2323 && ";
             //str += "dd if=/tmp/out.bin skip=1 bs=720 count=1 2>/dev/null | nc -u -w 1 -6 2001:67c:20a1:1095:ba27:ebff:fe23:60d7 2323 && ";
             //str += "dd if=/tmp/out.bin skip=2 bs=720 count=1 2>/dev/null | nc -u -w 1 -6 2001:67c:20a1:1095:ba27:ebff:fe71:dd32 2323";
