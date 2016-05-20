@@ -99,9 +99,9 @@ $(function () {
         uploadAll().then(url => {
             var str =
                 "wget -O /tmp/out.png "+url+"; ";
-            str += "convert /tmp/out.png -type truecolor /tmp/out.jpg";
-            str += "curl -F file=@/tmp/out.jpg http://192.168.21.124:9027:";
-            str += "rm /tmp/out.png;";
+            str += "convert /tmp/out.png -type truecolor /tmp/out.jpg; ";
+            str += "curl -F file=@/tmp/out.jpg http://192.168.21.124:9027; ";
+            str += "rm /tmp/out.png; ";
             str += "rm /tmp/out.jpg;"; 
             //str += "dd if=/tmp/out.bin skip=0 bs=720 count=1 2>/dev/null | nc -u -w 1 -6 2001:67c:20a1:1095:ba27:ebff:feb9:db12 2323 && ";
             //str += "dd if=/tmp/out.bin skip=1 bs=720 count=1 2>/dev/null | nc -u -w 1 -6 2001:67c:20a1:1095:ba27:ebff:fe23:60d7 2323 && ";
