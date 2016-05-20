@@ -1,0 +1,2 @@
+wget -O /tmp/out.png http://i.imgur.com/ZV5S05o.png
+curl -F file=@/tmp/out.png http://192.168.21.124:9027
